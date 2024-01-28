@@ -16,14 +16,6 @@ const inde = express();
 const port = 3002;
 const cors = require('cors');
 
-const corsConfig = {
-  origin: "*",
-  methods: "GET",
-  credentials: true,
-  optionsSuccessStatus: 200,
-};
-
-
 try {
     inde.use('/api', genre);
 inde.use('/api', info);
@@ -35,14 +27,8 @@ inde.use('/api', episode);
 inde.use('/api', shedule);
 inde.use('/api', server);
 inde.use('/api', src);
-    inde.use(cors(CorsConfig));
+inde.use(cors());
 
-  inde.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://aniwatch-api-v1-0.onrender.com/');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
 
 
 inde.get('/', (req, res) =>{
