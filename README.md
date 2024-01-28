@@ -130,3 +130,27 @@ const data = await resp.json();
 console.log(data);
 ```
 
+### Response Sample
+
+```
+{
+"genrey": "Romance Anime",
+"nextpageavai": true,
+"genreX": [
+{
+"name": "Ranma ½ OVA",
+"jname": "Ranma ½ OVA",
+"format": "OVA",
+"duration": "30m",
+"sub": "6",
+"dubXanime": "6",
+"totalepX": "6",
+"descX": "Ranma Saotome continues his search for a way to become a normal teenage boy again. He gets into many hilarious situations involving the many girls in his life. One of the biggest challenges is overcoming the proposals from others who have found a suitable bride for Ranma. But he has his own worries and must muster up the best of his wits and martial arts to keep his sanity. It's not easy being desired by so many women (and men) and not breaking hearts of a few along the way. He just might be able to find it in his heart to confess to Akane or simply find another excuse that he can't marry such a tomboy girl. \n\n(Source: ANN)",
+"imageX": "https://img.flawlessfiles.com/_r/300x400/100/06/c9/06c902b091ea5ae2c711b6e00fa3705a/06c902b091ea5ae2c711b6e00fa3705a.jpg",
+"idX": "ranma-ova-906"
+},
+...
+]
+}
+```
+
