@@ -443,8 +443,27 @@ https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
 
 ```javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/server/ep=3662"
+  "https://aniwatch-api-v1-0.onrender.com/api/server/2720"
 );
 const data = await resp.json();
 console.log(data);
+```
+
+### Response Sample
+
+```
+{
+"serverSrc": [
+{
+"serversrcwatch": {
+"type": "iframe",
+"link": "https://megacloud.tv/embed-2/e-1/vEKIP50mN3OK?k=1",
+"server": 1,
+"sources": [],
+"tracks": [],
+"htmlGuide": ""
+}
+}
+]
+}
 ```
