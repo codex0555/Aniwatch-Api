@@ -24,10 +24,10 @@ src.get('/server-src/:id', async ( req, res )=>{
 
         const serverSrc = [];
 
-        const serverlinkAni = serversrcwatch.link;
-        const linktype = serversrcwatch.type;
+        //const serverlinkAni = serversrcwatch.link;
+        //const linktype = serversrcwatch.type;
 
-        serverSrc.push({ serverlinkAni, linktype});
+        serverSrc.push({ serversrcwatch});
 
         res.json({ serverSrc});
     } catch (error) {
