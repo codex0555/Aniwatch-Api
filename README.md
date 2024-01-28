@@ -156,9 +156,23 @@ console.log(data);
 
 ### GET Anime Info
 
+#### Endpoint
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/related/${id}
+```
+
+#### Path Parameters
+
+| Parameter |  Type  |               Description                | Required? | Default |
+| :-------: | :----: | :--------------------------------------: | :-------: | :-----: |
+|  `id`   | string | ------ |    Yes    |   --    |
+
+### Request Sample
+
 ```javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/related/"
+  "https://aniwatch-api-v1-0.onrender.com/api/related/hunter-x-hunter-128"
 );
 const data = await resp.json();
 console.log(data);
