@@ -6,7 +6,7 @@ const genre = express();
 
 const USER_AGENT ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
 
-genre.get('/genre/:id/:page', async ( req, res)=>{
+genre.get('/genre/:id/:page?', async ( req, res)=>{
     const genreneed = req.params.id;
     const pagenumber = parseInt(req.params.page) || 1;
     const genrelink = `https://aniwatchtv.to/genre/${genreneed}?page=${pagenumber}`;
