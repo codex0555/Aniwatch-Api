@@ -57,3 +57,20 @@ console.log(data);
 ]
 }
 ```
+
+### `GET` Anime About Info
+
+#### Endpoint
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/search/${query_parameter}/${page}
+```
+
+#### Query Parameters
+
+| Parameter |  Type  |             Description              | Required? | Default |
+| :-------: | :----: | :----------------------------------: | :-------: | :-----: |
+|   `query_parameter`    | string | The Anime You Want To See.. |    Yes    |   --    |
+|   `page`    | int | ----- |    Yes    |   1   |
+
+#### Request sample
