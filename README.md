@@ -58,7 +58,7 @@ console.log(data);
 }
 ```
 
-### `GET` Anime About Info
+### `GET` Search Anime 
 
 #### Endpoint
 
