@@ -74,3 +74,10 @@ https://aniwatch-api-v1-0.onrender.com/api/search/${query_parameter}/${page}
 |   `page`    | int | ----- |    Yes    |   1   |
 
 #### Request sample
+
+```
+javascript
+const resp = await fetch("https://aniwatch-api-v1-0.onrender.com/api/search/yourname/1");
+const data = await resp.json();
+console.log(data);
+```
