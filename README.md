@@ -109,7 +109,7 @@ console.log(data);
 #### Endpoint
 
 ```sh
-https://api-aniwatch.onrender.com/anime/genre/{name}?page={page}
+https://aniwatch-api-v1-0.onrender.com/api/genre/${genre_name}/${pagee}
 ```
 
 #### Path Parameters
@@ -124,7 +124,7 @@ https://api-aniwatch.onrender.com/anime/genre/{name}?page={page}
 
 ```javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/genre/${genre_name}/${pagee}"
+  "https://aniwatch-api-v1-0.onrender.com/api/genre/romance/1"
 );
 const data = await resp.json();
 console.log(data);
