@@ -16,12 +16,12 @@ const inde = express();
 const port = 3002;
 const cors = require('cors');
 
-const corsConfig = cors({
+const corsConfig = {
   origin: "*",
   methods: "GET",
   credentials: true,
   optionsSuccessStatus: 200,
-});
+};
 
 
 try {
@@ -35,7 +35,7 @@ inde.use('/api', episode);
 inde.use('/api', shedule);
 inde.use('/api', server);
 inde.use('/api', src);
-    inde.use(CorsConfig);
+    inde.use(cors(CorsConfig));
 
 
 inde.get('/', (req, res) =>{
