@@ -178,3 +178,98 @@ const data = await resp.json();
 console.log(data);
 ```
 
+### Response Sample
+
+```
+{
+"infoX": [
+{
+"name": "Hunter x HunterHunter x Hunter",
+"jname": "Hunter x Hunter",
+"pganime": "PG-13",
+"quality": "HD",
+"epsub": "62",
+"epdub": "62",
+"totalep": "62",
+"format": "TV",
+"duration": "23m",
+"desc": "Hunters are specialized in a wide variety of fields, ranging from treasure hunting to cooking. They have access to otherwise unavailable funds and information that allow them to pursue their dreams and interests. However, being a hunter is a special privilege, only attained by taking a deadly exam with an extremely low success rate.\n\nGon Freecss, a 12-year-old boy with the hope of finding his missing father, sets out on a quest to take the Hunter Exam. Along the way, he picks up three companions who also aim to take the dangerous test: the revenge-seeking Kurapika, aspiring doctor Leorio Paladiknight, and a mischievous child the same age as Gon, Killua Zoldyck.\n\nHunter x Hunter is a classic shounen that follows the story of four aspiring hunters as they embark on a perilous adventure, fighting for their dreams while defying the odds.\n\n[Written by MAL Rewrite]\n                                \n                                        Hunters are specialized in a wide variety of fields, ranging from treasure hunting to cooking. They have access to otherwise unavailable funds and information that allow them to pursue their dreams and interests. However, being a hunter is a special privilege, only attained by taking a deadly exam with an extremely low success rate.\n\nGon Freecss, a 12-year-old boy with the hope of finding his missing father, sets out on a quest to take the Hunter Exam. Along the way, he picks up three companions who also aim to take the dangerous test: the revenge-seeking Kurapika, aspiring doctor Leorio Paladiknight, and a mischievous child the same age as Gon, Killua Zoldyck.\n\nHunter x Hunter is a classic shounen that follows the story of four aspiring hunters as they embark on a perilous adventure, fighting for their dreams while defying the odds.\n\n[Written by MAL Rewrite]",
+"id": "hunter-x-hunter-128",
+"image": "https://img.flawlessfiles.com/_r/300x400/100/45/c5/45c50af44712f05b30c9cbfba6283abb/45c50af44712f05b30c9cbfba6283abb.jpg"
+},
+{
+"japanese": "HUNTER×HUNTER（ハンター×ハンター）",
+"aired": "Oct 16, 1999 to Mar 31, 2001",
+"premired": "Fall 1999",
+"statusAnime": "Finished Airing",
+"malscore": "8.4",
+"genre": [
+"Action",
+"Adventure",
+"Fantasy",
+"Shounen",
+"Super Power"
+],
+"studio": "Nippon Animation",
+"producer": [
+"Fuji TV",
+"Nippon Animation",
+"Viz Media"
+]
+},
+{
+"animechar": [
+{
+"name": "Freecss, GonTakeuchi, Junko",
+"voice": "Takeuchi, Junko",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/6b/cb/6bcb79c4b6b809027fa3fc801ad679cd/6bcb79c4b6b809027fa3fc801ad679cd.jpg",
+"animedesignation": "Main",
+"voicelang": "Japanese",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/08/5b/085b74052135dff713b4e797bf9d0214/085b74052135dff713b4e797bf9d0214.jpg"
+},
+{
+"name": "KurapikaKaida, Yuki",
+"voice": "Kaida, Yuki",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/f5/4c/f54cfb491c808d407b08476242426e76/f54cfb491c808d407b08476242426e76.jpg",
+"animedesignation": "Main",
+"voicelang": "Japanese",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/58/fa/58fa02edd045ed365c7851cbce6d5482/58fa02edd045ed365c7851cbce6d5482.jpg"
+},
+{
+"name": "Paladiknight, LeorioDe ambrosis, Massimo",
+"voice": "De ambrosis, Massimo",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/fb/17/fb1719d08bfe4670ba1e8fc27e32fad2/fb1719d08bfe4670ba1e8fc27e32fad2.jpg",
+"animedesignation": "Main",
+"voicelang": "Italian",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/3a/22/3a22b7fdf56149b9de2751db44f5f28a/3a22b7fdf56149b9de2751db44f5f28a.jpg"
+},
+{
+"name": "Zoldyck, KilluaMitsuhashi, Kanako",
+"voice": "Mitsuhashi, Kanako",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/02/39/02394a02d4f259850e5c471335ef60ca/02394a02d4f259850e5c471335ef60ca.jpg",
+"animedesignation": "Main",
+"voicelang": "Japanese",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/1d/de/1dde11edc488e0f7a68392be018f8cc9/1dde11edc488e0f7a68392be018f8cc9.jpg"
+},
+{
+"name": "AbeMizutani, Keiko",
+"voice": "Mizutani, Keiko",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/f1/96/f196167d7f10d58047b73bd9dec4f55b/f196167d7f10d58047b73bd9dec4f55b.jpg",
+"animedesignation": "Supporting",
+"voicelang": "Japanese",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/18/b0/18b07986a97e7c80757bf63684365ad3/18b07986a97e7c80757bf63684365ad3.jpg"
+},
+{
+"name": "AgonCastro, Mauro",
+"voice": "Castro, Mauro",
+"animeImg": "https://img.flawlessfiles.com/_r/100x100/100/dd/f2/ddf2e8cb20cd532f80ff2d651a745667/ddf2e8cb20cd532f80ff2d651a745667.jpg",
+"animedesignation": "Supporting",
+"voicelang": "Brazilian",
+"voiceImageX": "https://img.flawlessfiles.com/_r/100x100/100/b6/44/b6448fa13594f7c327a4648ebb335695/b6448fa13594f7c327a4648ebb335695.jpg"
+}
+]
+}
+]
+}
+```
+
