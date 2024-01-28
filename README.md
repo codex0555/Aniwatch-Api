@@ -339,8 +339,8 @@ https://aniwatch-api-v1-0.onrender.com/api/episode/${id}
 
 ### Request Sample
 
-```
-javascriptconst resp = await fetch(
+```javascript
+const resp = await fetch(
   "https://aniwatch-api-v1-0.onrender.com/api/episode/hunter-x-hunter-128"
 );
 const data = await resp.json();
