@@ -162,6 +162,13 @@ console.log(data);
 https://aniwatch-api-v1-0.onrender.com/api/shedule/${date}
 ```
 
+#### Path Parameters
+
+| Parameter |  Type  |               Description                | Required? | Default |
+| :-------: | :----: | :--------------------------------------: | :-------: | :-----: |
+|  `date`   | int | ------ |    Yes    |   --    |
+|  `yyyy-mm-dd`   | int | ------ |    Yes    |   --    |
+
 ### Request Sample
 
 ```javascript
