@@ -347,3 +347,18 @@ const data = await resp.json();
 console.log(data);
 ```
 
+### Response Sample
+
+```
+{
+"episodetown": [
+{
+"order": "1",
+"name": "A Boy Setting Out for a Journey × Leaving Behind the Sound of the Wind",
+"epId": "hunter-x-hunter-128?ep=3661"
+},
+...
+]
+}
+```
+
