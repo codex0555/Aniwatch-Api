@@ -8,9 +8,11 @@ const USER_AGENT ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 
 
 genre.get('/genre/:id/:page?', async ( req, res)=>{
     const genreneed = req.params.id;
-    const pagenumber = parseInt(req.params.page) || 1;
+    var pagenumber = parseInt(req.params.page) || 1 ;
     const genrelink = `https://aniwatchtv.to/genre/${genreneed}?page=${pagenumber}`;
-    const genrelinkani = `https://aniwatchtv.to/${genreneed}?page=${pagenumber +1}`;
+    const genrelinkanni = `https://aniwatchtv.to/genre/${genreneed}?page=${pagenumber +1}`;
+
+
 
     try {
         const genreone = await axios.get(genrelink, {
@@ -22,7 +24,7 @@ genre.get('/genre/:id/:page?', async ( req, res)=>{
 
         const $ = cheerio.load(receivegenre);
 
-        const nextpageani = await axios.get(genrelinkani, {
+        const nextpageani = await axios.get(genrelinkanni, {
             headers:{
                 'User-Agent': USER_AGENT,
             }
@@ -42,6 +44,7 @@ genre.get('/genre/:id/:page?', async ( req, res)=>{
         }
     
         var nextpageavai = nextpageavai;
+
 
         const genreX = [];
 
@@ -63,9 +66,9 @@ genre.get('/genre/:id/:page?', async ( req, res)=>{
             genreX.push({ name, jname, format, duration, sub, dubXanime, totalepX, descX, imageX, idX});
         });
 
-        res.json({ genrey : genrey, nextpageavai: nextpageavai, genreX});
+        res.json({ genrey: genrey, nextpageavai: nextpageavai, genreX});
     } catch (error) {
-        console.log('In Error.')
+        console.log('In Error.',error)
         res.send('Check Your Demand //frozen');
     }
 })
