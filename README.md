@@ -116,13 +116,9 @@ https://api-aniwatch.onrender.com/anime/genre/{name}?page={page}
 
 | Parameter |  Type  |               Description                | Required? | Default |
 | :-------: | :----: | :--------------------------------------: | :-------: | :-----: |
-|  `name`   | string | The name of anime genre (in kebab case). |    Yes    |   --    |
+|  `genre_name`   | string | The name of anime genre . |    Yes    |   --    |
+|  `page`   | int | ------ |    Yes    |   1    |
 
-#### Query Parameters
-
-| Parameter |  Type  |          Description           | Required? | Default |
-| :-------: | :----: | :----------------------------: | :-------: | :-----: |
-|  `page`   | number | The page number of the result. |    No     |   `1`   |
 
 #### Request sample
 
