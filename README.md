@@ -154,3 +154,5 @@ console.log(data);
 }
 ```
 
+###GET
+
