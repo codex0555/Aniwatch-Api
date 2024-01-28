@@ -154,6 +154,40 @@ console.log(data);
 }
 ```
 
+### GET Anime Schedule
+
+**Endpoint**
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/shedule/${date}
+```
+
+### Request Sample
+
+```javascript
+const resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/shedule/2024-01-28"
+);
+const data = await resp.json();
+console.log(data);
+```
+
+### Response Sample
+
+```
+{
+"Sheduletoday": [
+{
+"name": "The Apothecary Diaries",
+"jname": "Kusuriya no Hitorigoto",
+"time": "00:15",
+"epshedule": "Episode 16"
+},
+...
+]
+}
+```
+
 ### GET Anime Info
 
 **Endpoint**
