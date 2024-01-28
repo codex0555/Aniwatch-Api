@@ -480,6 +480,12 @@ console.log(data);
 https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
 ```
 
+#### Path Parameters
+
+| Parameter |  Type  |               Description                | Required? | Default |
+| :-------: | :----: | :--------------------------------------: | :-------: | :-----: |
+|  `srcId`   | int | ------ |    Yes    |   --    |
+
 ### Request Sample
 
 ```javascript
