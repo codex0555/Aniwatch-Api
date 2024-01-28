@@ -431,3 +431,11 @@ console.log(data);
 }
 ```
 
+### GET Anime ServerLink
+
+**Endpoint**
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
+```
+
