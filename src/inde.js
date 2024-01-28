@@ -14,6 +14,14 @@ const src = require('./routes/server-src.js');
 
 const inde = express();
 const port = 3002;
+import cors from "cors";
+
+const corsConfig = cors({
+  origin: "*",
+  methods: "GET",
+  credentials: true,
+  optionsSuccessStatus: 200,
+});
 
 
 try {
@@ -27,14 +35,7 @@ inde.use('/api', episode);
 inde.use('/api', shedule);
 inde.use('/api', server);
 inde.use('/api', src);
-
-
-inde.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'your-domain-here');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
+    inde.use(CorsConfig);
 
 
 inde.get('/', (req, res) =>{
