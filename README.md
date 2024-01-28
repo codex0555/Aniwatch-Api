@@ -124,7 +124,7 @@ https://api-aniwatch.onrender.com/anime/genre/{name}?page={page}
 
 ```javascript
 const resp = await fetch(
-  "https://api-aniwatch.onrender.com/anime/genre/shounen?page=2"
+  "https://aniwatch-api-v1-0.onrender.com/api/genre/${genre_name}/${pagee}"
 );
 const data = await resp.json();
 console.log(data);
