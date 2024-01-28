@@ -103,3 +103,34 @@ console.log(data);
 ]
 }
 ```
+
+### GET Anime Genre 
+
+#### Endpoint
+
+```sh
+https://api-aniwatch.onrender.com/anime/genre/{name}?page={page}
+```
+
+#### Path Parameters
+
+| Parameter |  Type  |               Description                | Required? | Default |
+| :-------: | :----: | :--------------------------------------: | :-------: | :-----: |
+|  `name`   | string | The name of anime genre (in kebab case). |    Yes    |   --    |
+
+#### Query Parameters
+
+| Parameter |  Type  |          Description           | Required? | Default |
+| :-------: | :----: | :----------------------------: | :-------: | :-----: |
+|  `page`   | number | The page number of the result. |    No     |   `1`   |
+
+#### Request sample
+
+```javascript
+const resp = await fetch(
+  "https://api-aniwatch.onrender.com/anime/genre/shounen?page=2"
+);
+const data = await resp.json();
+console.log(data);
+```
+
