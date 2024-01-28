@@ -32,3 +32,24 @@ console.log(data);
 },
 ...
 ]
+"trend": [
+{
+"name": "One Piece",
+"ranking": "01",
+"imgAni": "https://img.flawlessfiles.com/_r/300x400/100/54/90/5490cb32786d4f7fef0f40d7266df532/5490cb32786d4f7fef0f40d7266df532.jpg",
+"jname": "One Piece",
+"iD": "one-piece-100"
+},
+...
+]
+"UpcomingAnime": [
+{
+"name": "Shangri-La Frontier",
+"format": "TV",
+"release": "25m",
+"idani": "shangri-la-frontier-18567",
+"imgAnime": "https://img.flawlessfiles.com/_r/300x400/100/de/c4/dec411fa0ea5a64ac23c94b4444d8bdb/dec411fa0ea5a64ac23c94b4444d8bdb.jpg"
+},
+...
+]
+}
