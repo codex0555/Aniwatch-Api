@@ -75,8 +75,7 @@ https://aniwatch-api-v1-0.onrender.com/api/search/${query_parameter}/${page}
 
 #### Request sample
 
-```
-javascript
+```javascript
 const resp = await fetch("https://aniwatch-api-v1-0.onrender.com/api/search/your%20name/1");
 const data = await resp.json();
 console.log(data);
