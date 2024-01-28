@@ -77,7 +77,30 @@ https://aniwatch-api-v1-0.onrender.com/api/search/${query_parameter}/${page}
 
 ```
 javascript
-const resp = await fetch("https://aniwatch-api-v1-0.onrender.com/api/search/yourname/1");
+const resp = await fetch("https://aniwatch-api-v1-0.onrender.com/api/search/your%20name/1");
 const data = await resp.json();
 console.log(data);
+```
+
+### Response Sample
+
+```
+{
+"nextpageavailable": true,
+"searchYour": [
+{
+"name": "Your Name",
+"jname": "Kimi no Na wa.",
+"format": "Movie",
+"duration": "106m",
+"idanime": "your-name-10",
+"sub": "1",
+"dubani": "1",
+"totalep": false,
+"img": "https://img.flawlessfiles.com/_r/300x400/100/16/ee/16eec56baf8f3fcc6430607f58ce3d12/16eec56baf8f3fcc6430607f58ce3d12.jpg",
+"pg": false
+},
+...
+]
+}
 ```
