@@ -1,9 +1,6 @@
 # Aniwatch-Api
 This Is The Api Of Aniwatch.to (Zoro.to). Made With Express.js.
 
-# AnimeWatch API
-
-Welcome to the AnimeWatch API! This API provides information about anime, including the latest episodes, spotlight animes, top 10 animes, and more.
 
 ## Getting Started
 
