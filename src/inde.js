@@ -37,6 +37,13 @@ inde.use('/api', server);
 inde.use('/api', src);
     inde.use(cors(CorsConfig));
 
+  inde.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://aniwatch-api-v1-0.onrender.com/');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
 
 inde.get('/', (req, res) =>{
     res.send("Api Is ON SERVICE !");
