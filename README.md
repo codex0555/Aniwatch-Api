@@ -281,3 +281,20 @@ console.log(data);
 https://aniwatch-api-v1-0.onrender.com/api/related/${id}
 ```
 
+```
+javascript
+const resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/related/hunter-x-hunter-128"
+);
+const data = await resp.json();
+console.log(data);
+```
+
+#### Query Parameters
+
+| Parameter |  Type  |             Description              | Required? | Default |
+| :-------: | :----: | :----------------------------------: | :-------: | :-----: |
+|   `query_parameter`    | string | The Anime You Want To See.. |    Yes    |   --    |
+|   `page`    | int | ----- |    Yes    |   1   |
+|   `movie,ova,ona,subbed-anime,dubbed-anime,special`    | string | The Anime You Want To See.. |    Yes    |   --    |
+
