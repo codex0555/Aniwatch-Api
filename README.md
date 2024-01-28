@@ -106,7 +106,7 @@ console.log(data);
 
 ### GET Anime Genre 
 
-#### Endpoint
+ **Endpoint**
 
 ```sh
 https://aniwatch-api-v1-0.onrender.com/api/genre/${genre_name}/${pagee}
@@ -156,7 +156,7 @@ console.log(data);
 
 ### GET Anime Info
 
-#### Endpoint
+**Endpoint**
 
 ```sh
 https://aniwatch-api-v1-0.onrender.com/api/related/${id}
@@ -275,7 +275,7 @@ console.log(data);
 
 ### GET MOVIE ANIME
 
-### Endpoint
+**Endpoint**
 
 ```sh
 https://aniwatch-api-v1-0.onrender.com/api/related/${id}
