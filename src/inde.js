@@ -28,6 +28,15 @@ inde.use('/api', shedule);
 inde.use('/api', server);
 inde.use('/api', src);
 
+
+inde.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'your-domain-here');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
+
 inde.get('/', (req, res) =>{
     res.send("Api Is ON SERVICE !");
 });
