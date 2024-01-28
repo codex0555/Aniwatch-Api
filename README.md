@@ -282,8 +282,7 @@ https://aniwatch-api-v1-0.onrender.com/api/mix/${query_paramenter}/${page}
 ```
 ### Request Sample
 
-```
-javascript
+```javascript
 const resp = await fetch(
   "https://aniwatch-api-v1-0.onrender.com/api/mix/tv/1"
 );
