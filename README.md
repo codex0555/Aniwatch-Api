@@ -273,3 +273,11 @@ console.log(data);
 }
 ```
 
+### GET MOVIE ANIME
+
+### Endpoint
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/related/${id}
+```
+
