@@ -280,6 +280,7 @@ console.log(data);
 ```sh
 https://aniwatch-api-v1-0.onrender.com/api/mix/${query_paramenter}/${page}
 ```
+### Request Sample
 
 ```
 javascript
@@ -298,3 +299,26 @@ console.log(data);
 |   `page`    | int | ----- |    Yes    |   1   |
 |   `movie,ova,ona,subbed-anime,dubbed-anime,special,tv,popular,`    | string | The Anime You Want To See.. |    Yes    |   --    |
 
+
+### Response Sample
+
+```
+{
+"nextpageavai": true,
+"mixAni": [
+{
+"name": "Isekai Onsen Paradise [UNCENSORED]",
+"jname": "Meitou \"Isekai no Yu\" Kaitakuki: Around 40 Onsen Mania no Tensei Saki wa, Nonbiri Onsen Tengoku deshita [UNCENSORED]",
+"format": "TV",
+"duration": "3m",
+"idanime": "isekai-onsen-paradise-uncensored-18982",
+"sub": "2",
+"dubani": false,
+"totalep": false,
+"img": "https://img.flawlessfiles.com/_r/300x400/100/86/0e/860e709b923e7295527377edc45b9060/860e709b923e7295527377edc45b9060.jpg",
+"pg": "18+"
+},
+...
+]
+}
+```
