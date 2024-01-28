@@ -14,7 +14,7 @@ const src = require('./routes/server-src.js');
 
 const inde = express();
 const port = 3002;
-import cors from "cors";
+const cors = require('cors');
 
 const corsConfig = cors({
   origin: "*",
