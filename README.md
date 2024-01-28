@@ -17,15 +17,18 @@ const data = await resp.json();
 console.log(data);
 
 {
-  "genres": ["Action", "Cars", "Adventure", ...],
-  "latestEpisodeAnimes": [...],
-  "spotlightAnimes": [...],
-  "top10Animes": {
-    "today": [...],
-    "month": [...],
-    "week": [...]
-  },
-  "topAiringAnimes": [...],
-  "topUpcomingAnimes": [...],
-  "trendingAnimes": [...]
-}
+"slides": [
+{
+"name": "The Apothecary Diaries",
+"jname": "Kusuriya no Hitorigoto",
+"spotlight": "#1 Spotlight",
+"imageAnime": "https://img.flawlessfiles.com/_r/1366x768/100/31/aa/31aacbf403a8f1c180a940009dbf17f5/31aacbf403a8f1c180a940009dbf17f5.jpeg",
+"format": "TV",
+"duration": "24m",
+"release": "Oct 22, 2023",
+"quality": "HD",
+"animeId": "the-apothecary-diaries-18578",
+"anidesc": "In an imperial court in ancient China, it has been a few months since a 17-year-old girl known as Maomao was kidnapped and forced to work as a low-level servant at the emperor's palace. Still, she manages to retain her curious and pragmatic spirit, planning to work until her years of servitude are over. One day, however, she catches wind of the fact that the emperor's two infants have fallen gravely ill. She decides to secretly take action, drawing on her experience as a pharmacist raised in the poor red-light district.  Despite Maomao's attempts to remain anonymous, she soon catches the eye of Jinshi, an influential eunuch who recognizes her talents. Maomao soon finds herself in the emperor's inner court, where she gradually makes a name for herself by utilizing her knowledge and eccentric personality to solve various medical mysteries."
+},
+...
+]
