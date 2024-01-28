@@ -362,3 +362,72 @@ console.log(data);
 }
 ```
 
+### GET ANIME SERVER
+
+**Endpoint**
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/server/${epId}
+```
+
+### Request Sample
+
+```javascript
+const resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/server/ep=3662"
+);
+const data = await resp.json();
+console.log(data);
+```
+
+### Response Sample
+
+```
+{
+"sub": [
+{
+"server": "vidstreaming",
+"id": "4",
+"srcId": "636137"
+},
+{
+"server": "megacloud",
+"id": "1",
+"srcId": "411986"
+},
+{
+"server": "streamsb",
+"id": "5",
+"srcId": "830715"
+},
+{
+"server": "streamtape",
+"id": "3",
+"srcId": "830716"
+}
+],
+"dub": [
+{
+"server": "vidstreaming",
+"id": "4",
+"srcId": "582275"
+},
+{
+"server": "megacloud",
+"id": "1",
+"srcId": "2720"
+},
+{
+"server": "streamsb",
+"id": "5",
+"srcId": "714095"
+},
+{
+"server": "streamtape",
+"id": "3",
+"srcId": "736795"
+}
+]
+}
+```
+
