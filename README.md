@@ -290,7 +290,7 @@ const data = await resp.json();
 console.log(data);
 ```
 
-#### Query Parameters
+### Query Parameters
 
 | Parameter |  Type  |             Description              | Required? | Default |
 | :-------: | :----: | :----------------------------------: | :-------: | :-----: |
@@ -321,3 +321,29 @@ console.log(data);
 ]
 }
 ```
+
+### GET Anime Episode
+
+### Query Parameters
+
+| Parameter |  Type  |             Description              | Required? | Default |
+| :-------: | :----: | :----------------------------------: | :-------: | :-----: |
+|   `id`    | string | ------ |    Yes    |   --    |
+
+
+**Endpoint**
+
+```sh
+https://aniwatch-api-v1-0.onrender.com/api/episode/${id}
+```
+
+### Request Sample
+
+```
+javascriptconst resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/episode/hunter-x-hunter-128"
+);
+const data = await resp.json();
+console.log(data);
+```
+
