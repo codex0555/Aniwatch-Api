@@ -15,3 +15,17 @@ To get started, you can use the following endpoints:
 const resp = await fetch("https://aniwatch-api-v1-0.onrender.com/api/parse");
 const data = await resp.json();
 console.log(data);
+
+{
+  "genres": ["Action", "Cars", "Adventure", ...],
+  "latestEpisodeAnimes": [...],
+  "spotlightAnimes": [...],
+  "top10Animes": {
+    "today": [...],
+    "month": [...],
+    "week": [...]
+  },
+  "topAiringAnimes": [...],
+  "topUpcomingAnimes": [...],
+  "trendingAnimes": [...]
+}
