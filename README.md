@@ -439,3 +439,12 @@ console.log(data);
 https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
 ```
 
+### Request Sample
+
+```javascript
+const resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/server/ep=3662"
+);
+const data = await resp.json();
+console.log(data);
+```
