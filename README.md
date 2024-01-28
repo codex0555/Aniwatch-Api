@@ -154,5 +154,13 @@ console.log(data);
 }
 ```
 
-###GET
+### GET Anime Info
+
+```javascript
+const resp = await fetch(
+  "https://aniwatch-api-v1-0.onrender.com/api/related/"
+);
+const data = await resp.json();
+console.log(data);
+```
 
