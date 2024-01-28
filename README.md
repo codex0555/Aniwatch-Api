@@ -278,13 +278,13 @@ console.log(data);
 **Endpoint**
 
 ```sh
-https://aniwatch-api-v1-0.onrender.com/api/related/${id}
+https://aniwatch-api-v1-0.onrender.com/api/mix/${query_paramenter}/${page}
 ```
 
 ```
 javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/related/hunter-x-hunter-128"
+  "https://aniwatch-api-v1-0.onrender.com/api/mix/tv/1"
 );
 const data = await resp.json();
 console.log(data);
@@ -296,5 +296,5 @@ console.log(data);
 | :-------: | :----: | :----------------------------------: | :-------: | :-----: |
 |   `query_parameter`    | string | The Anime You Want To See.. |    Yes    |   --    |
 |   `page`    | int | ----- |    Yes    |   1   |
-|   `movie,ova,ona,subbed-anime,dubbed-anime,special`    | string | The Anime You Want To See.. |    Yes    |   --    |
+|   `movie,ova,ona,subbed-anime,dubbed-anime,special,tv,popular,`    | string | The Anime You Want To See.. |    Yes    |   --    |
 
