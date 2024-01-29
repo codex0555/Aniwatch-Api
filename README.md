@@ -502,14 +502,14 @@ console.log(data);
 {
 "serverSrc": [
 {
-"serversrcwatch": {
-"type": "iframe",
-"link": "https://megacloud.tv/embed-2/e-1/vEKIP50mN3OK?k=1",
-"server": 1,
-"sources": [],
-"tracks": [],
-"htmlGuide": ""
+"text": "The Mega Link May Not Work.So You Can Go With Alternative.",
+"serverlinkAni": "https://megacloud.tv/embed-2/e-1/qU0BWXuBvi8L?k=1",
+"rest": [
+{
+"file": "https://eno.tendoloads.com/_v6/2961b54cd93cf96ad354264d6220bbb97cab9c832c5131454560053d50c847e7109d7ae6d2f7607c942343dbe4ab4a43299a18ff0a1ff15efe3e4a4a1a6bbefc34a0d7fa769ae3ffbdc023669d892cb43e3ae169121ab3ea2a2ac4a04ce15dfda134bccc00f2e4e4eba6a71fe5cb493c/master.m3u8",
+"type": "hls"
 }
+]
 }
 ]
 }
