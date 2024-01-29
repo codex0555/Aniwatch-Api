@@ -3,9 +3,12 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 
 const server = express();
+const cors = require('cors');
 
 const USER_AGENT ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
 const ACCEPT_ENCODING_HEADER = "gzip, deflate, br";
+
+server.use(cors());
 
 server.get('/server/:id', async ( req, res )=>{
     const serverour = req.params.id.match(/\d+/);
