@@ -4,7 +4,10 @@ const cheerio = require('cheerio');
 
 const search = express();
 //const port = 3000;
+const cors = require('cors');
 const USER_AGENT ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
+
+search.use(cors());
 
 search.get('/search/:id/:page?', async (req , res)=>{
     const searchdetails = req.params.id;
