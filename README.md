@@ -477,7 +477,7 @@ console.log(data);
 **Endpoint**
 
 ```sh
-https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
+https://aniwatch-api-v1-0.onrender.com/api/server-src/${srcId}
 ```
 
 #### Path Parameters
@@ -490,7 +490,7 @@ https://aniwatch-api-v1-0.onrender.com/api/server/${srcId}
 
 ```javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/server/2720"
+  "https://aniwatch-api-v1-0.onrender.com/api/server-src/2720"
 );
 const data = await resp.json();
 console.log(data);
