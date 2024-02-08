@@ -29,7 +29,7 @@ info.get('/related/:id', async function(req, res) {
         const infoX = [];
 
         $('.anis-content').each(function(index, element){
-            const name = $(element).find('.dynamic-name').text();
+            const name = $(element).find('.film-name.dynamic-name').text();
             const jname = $(element).find('.dynamic-name').attr('data-jname');
             const pganime = $(element).find('.tick-pg').text();
             const quality = $(element).find('.tick-quality').text();
