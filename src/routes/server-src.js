@@ -108,7 +108,16 @@ class RapidCloud {
       }
 
       console.log("Result:", result);
-      return result;
+      result.subtitles = tracks
+      .map((s) =>
+        s.file
+          ? { url: s.file, lang: s.label ? s.label : "Thumbnails" }
+          : null
+      )
+      .filter((s) => s);
+
+    return result;
+  
     } catch (err) {
       console.error(err);
       throw err;
@@ -149,10 +158,11 @@ src.get('/server-src/:id', async (req, res) => {
     const videoUrl = new URL(`https://megacloud.tv/embed-2/e-1/${encryptedID}`);
     const result = await rapidCloud.extract(videoUrl);
     const rest = result.sources;
+    const sub = result.subtitles;
 
     const mega = "The Mega Link May Not Work.So You Can Go With Alternative."
 
-    serverSrc.push({ text: mega, serverlinkAni, rest });
+    serverSrc.push({ text: mega, serverlinkAni, rest, sub});
 
     res.json({ serverSrc });
   } catch (error) {
