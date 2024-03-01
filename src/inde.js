@@ -10,11 +10,11 @@ const mix = require('./routes/mix.js');
 const episode = require('./routes/episode.js');
 const shedule = require('./routes/shedule.js');
 const server = require('./routes/server.js');
-const src = require('./routes/server-src.js');
+const src = require('./routes/src1.js');
 
 const inde = express();
-const port = 3002;
-const cors = require('cors');
+const port = 3005;
+
 
 try {
     inde.use('/api', genre);
@@ -27,9 +27,6 @@ inde.use('/api', episode);
 inde.use('/api', shedule);
 inde.use('/api', server);
 inde.use('/api', src);
-inde.use(cors());
-
-
 
 inde.get('/', (req, res) =>{
     res.send("Api Is ON SERVICE !");
@@ -38,6 +35,7 @@ inde.get('/', (req, res) =>{
 
 } catch (error) {
     // res.send('Back To Home');
+    console.log(error);
 }
 
 inde.listen(port, () => {
