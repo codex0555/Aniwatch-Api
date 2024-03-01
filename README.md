@@ -477,7 +477,7 @@ console.log(data);
 **Endpoint**
 
 ```sh
-https://aniwatch-api-v1-0.onrender.com/api/server-src/${srcId}
+https://aniwatch-api-v1-0.onrender.com/api/src-server/${srcId}
 ```
 
 #### Path Parameters
