@@ -490,7 +490,7 @@ https://aniwatch-api-v1-0.onrender.com/api/src-server/${srcId}
 
 ```javascript
 const resp = await fetch(
-  "https://aniwatch-api-v1-0.onrender.com/api/server-src/2720"
+  "https://aniwatch-api-v1-0.onrender.com/api/src-server/2720"
 );
 const data = await resp.json();
 console.log(data);
