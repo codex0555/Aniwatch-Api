@@ -46,6 +46,8 @@ info.get('/related/:id', async function(req, res) {
             infoX.push({ name, jname, pganime, quality, epsub, epdub, totalep, format, duration, desc, id, image });
         });
 
+        const mal_id = $('#syncData').text().split('"mal_id":"')[1].split('",')[0] || null;
+
         $('.anisc-info').each(function(index, element){
             const japanese = $(element).find('.name:eq(0)').text();
             const aired = $(element).find('.name:eq(2)').text();
@@ -75,7 +77,7 @@ info.get('/related/:id', async function(req, res) {
             infoX.push({ season});
         })
         
-        res.json({ infoX });
+        res.json({ infoX , mal_id});
 
     } catch (error) {
         console.error('Error processing related route:', error);
