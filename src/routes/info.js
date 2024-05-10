@@ -48,6 +48,8 @@ info.get('/related/:id', async function(req, res) {
 
         const mal_id = $('#syncData').text().split('"mal_id":"')[1].split('",')[0] || null;
 
+        const aniid = $('#syncData').text().split('"anilist_id":"')[1].split('",')[0] || null;
+
         $('.anisc-info').each(function(index, element){
             const japanese = $(element).find('.name:eq(0)').text();
             const aired = $(element).find('.name:eq(2)').text();
@@ -77,7 +79,7 @@ info.get('/related/:id', async function(req, res) {
             infoX.push({ season});
         })
         
-        res.json({ infoX , mal_id});
+        res.json({ infoX , mal_id, aniid});
 
     } catch (error) {
         console.error('Error processing related route:', error);
