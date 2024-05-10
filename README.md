@@ -225,7 +225,7 @@ console.log(data);
 {
 "infoX": [
 {
-"name": "Hunter x HunterHunter x Hunter",
+"name": "Hunter x Hunter",
 "jname": "Hunter x Hunter",
 "pganime": "PG-13",
 "quality": "HD",
@@ -310,7 +310,8 @@ console.log(data);
 }
 ]
 }
-]
+],
+"mal_id": "136"
 }
 ```
 
