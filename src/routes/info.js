@@ -84,7 +84,7 @@ info.get('/related/:id', async function(req, res) {
             const name = $(element).find('.film-name').text() || null;
             const jname = $(element).find('.film-name a').attr('data-jname') || null;
             const sub = $(element).find('.tick-item.tick-sub').text() ;
-            const dub = $(element).find('.tick-item.tick-dub').text() || null;
+            const dub = $(element).find('.tick-item.tick-dub').text() || 0;
             const total = $(element).find('.tick-item.tick-eps').text() || null;
             const xid = $(element).find('a').attr('href').split('/')[1] || null;
             const image = $(element).find('img').attr('data-src') || null;
