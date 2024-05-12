@@ -78,8 +78,23 @@ info.get('/related/:id', async function(req, res) {
 
             infoX.push({ season});
         })
+
+        const recommendation = [];
+        $('.film_list-wrap').find('.flw-item').each(( index, element)=>{
+            const name = $(element).find('.film-name').text() || null;
+            const jname = $(element).find('.film-name a').attr('data-jname') || null;
+            const sub = $(element).find('.tick-item.tick-sub').text() ;
+            const dub = $(element).find('.tick-item.tick-dub').text() || null;
+            const total = $(element).find('.tick-item.tick-eps').text() || null;
+            const xid = $(element).find('a').attr('href').split('/')[1] || null;
+            const image = $(element).find('img').attr('data-src') || null;
+            const format = $(element).find('.fdi-item:first').text() || null;
+            const duration = $(element).find('.fdi-duration').text() || null;
+
+            recommendation.push({ name, jname, sub, dub, total, xid, image, format, duration});
+        })
         
-        res.json({ infoX , mal_id, aniid});
+        res.json({ infoX , mal_id, aniid, recommendation});
 
     } catch (error) {
         console.error('Error processing related route:', error);
