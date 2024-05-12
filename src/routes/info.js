@@ -64,7 +64,7 @@ info.get('/related/:id', async function(req, res) {
         })
 
         $('.bac-list-wrap').each(function(index, element){
-            const animechar = $(element).find('.bac-item').map((index, element) => ({name: $(element).find('.pi-name').text() || null, voice : $(element).find('.per-info.rtl h4').text() || null, animeImg : $(element).find('.per-info.ltr img').attr('data-src') || null, animedesignation : $(element).find('.pi-cast:first').text(), voicelang : $(element).find('.per-info.rtl span').text() || null, voiceImageX : $(element).find('.per-info.rtl img').attr('data-src') || null})).get() ;
+            const animechar = $(element).find('.bac-item').map((index, element) => ({name: $(element).find('.pi-name').text() || null, voice : $(element).find('.per-info.rtl h4').text() || null, animeImg : $(element).find('.per-info.ltr img').attr('data-src') || null, animedesignation : $(element).find('.pi-cast:first').text(), voicelang : $(element).find('.per-info.rtl span').text() || null, voiceImageX : $(element).find('.per-info.rtl img').attr('data-src') || null})).get() || null;
 
 
             infoX.push({ animechar});
