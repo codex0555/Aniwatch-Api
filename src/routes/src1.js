@@ -7,7 +7,7 @@ const cors = require('cors');
 const src1 = express();
 src1.use(cors());
 
-const USER_AGENT ="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
+const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36";
 const ACCEPT_ENCODING_HEADER = "gzip, deflate, br";
 
 // Define the megacloud object
@@ -36,9 +36,13 @@ class MegaCloud {
         sources: [],
       };
 
+      const nounce = this.extractNonce(html.data);
       const videoId = videoUrl?.href?.split("/")?.pop()?.split("?")[0];
+
+      const finalUrl = megacloud.sources.concat(videoId || "") + "&_k=" + nounce;
+
       const { data: srcsData } = await axios.get(
-        megacloud.sources.concat(videoId || ""),
+        finalUrl,
         {
           headers: {
             Accept: "*/*",
@@ -105,6 +109,21 @@ class MegaCloud {
     } catch (err) {
       throw err;
     }
+  }
+
+  extractNonce(iframeHtml) {
+    const match =
+      iframeHtml.match(/\b[a-zA-Z0-9]{48}\b/) ||
+      iframeHtml.match(
+        /\b([a-zA-Z0-9]{16})\b.?\b([a-zA-Z0-9]{16})\b.?\b([a-zA-Z0-9]{16})\b/
+      );
+
+    // If 3×16 chars → join them, otherwise use the 48-char match
+    return match
+      ? match.length === 4
+        ? match.slice(1).join("")
+        : match[0]
+      : null;
   }
 
   extractVariables(text) {
@@ -199,34 +218,34 @@ module.exports = MegaCloud;
 const megaCloudInstance = new MegaCloud();
 
 src1.get('/src-server/:id', async (req, res) => {
+  try {
+    const servernum = parseInt(req.params.id);
+    const serverlink = `https://aniwatchtv.to/ajax/v2/episode/sources?id=${servernum}`;
+    const serreq = await axios.get(serverlink, {
+      headers: {
+        'User-Agent': USER_AGENT,
+      }
+    });
+    const serres = serreq.data;
+    const serhash = serres['link'].split('/e-1/')[1].split('?k=1')[0];
+
+    const videoUrl = new URL(`https://megacloud.tv/embed-2/e-1/${serhash}?k=1`);
+
+    // Use the MegaCloud instance to extract information from the video URL
     try {
-        const servernum = parseInt(req.params.id);
-        const serverlink = `https://aniwatchtv.to/ajax/v2/episode/sources?id=${servernum}`;
-        const serreq = await axios.get(serverlink, {
-            headers: {
-                'User-Agent': USER_AGENT,
-            }
-        });
-        const serres = serreq.data;
-        const serhash = serres['link'].split('/e-1/')[1].split('?k=1')[0];
-
-        const videoUrl = new URL(`https://megacloud.tv/embed-2/e-1/${serhash}?k=1`);
-
-        // Use the MegaCloud instance to extract information from the video URL
-        try {
-            const result = await megaCloudInstance.extract(videoUrl);
-            // Display the result
-            console.log(result);
-            res.json({ restres: result });
-        } catch (error) {
-            // Handle errors
-            console.error(error);
-            res.status(500).json({ error: 'Internal Server Error' });
-        }
+      const result = await megaCloudInstance.extract(videoUrl);
+      // Display the result
+      console.log(result);
+      res.json({ restres: result });
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Internal Server Error' });
+      // Handle errors
+      console.error(error);
+      res.status(500).json({ error: 'Internal Server Error' });
     }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 module.exports = src1;
