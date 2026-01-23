@@ -12,8 +12,11 @@ const ACCEPT_ENCODING_HEADER = "gzip, deflate, br";
 
 // Define the megacloud object
 const megacloud = {
-  script: "https://megacloud.tv/js/player/a/prod/e1-player.min.js?v=",
-  sources: "https://megacloud.tv/embed-2/ajax/e-1/getSources?id=",
+  // script: "https://megacloud.tv/js/player/a/prod/e1-player.min.js?v=",
+  // sources: "https://megacloud.tv/embed-2/ajax/e-1/getSources?id=",
+  script: "https://megacloud.blog/js/player/a/v3/pro/embed-1.min.js?v=",
+  sources: "https://megacloud.blog/embed-2/v3/e-1/getSources?id=",
+
 };
 
 class MegaCloud {
@@ -239,7 +242,7 @@ src1.get('/src-server/:id', async (req, res) => {
     const serres = serreq.data;
     const serhash = serres['link'].split('/e-1/')[1].split('?k=1')[0];
 
-    const videoUrl = new URL(`https://megacloud.tv/embed-2/e-1/${serhash}?k=1`);
+    const videoUrl = new URL(`https://megacloud.blog/embed-2/v3/e-1/${serhash}?k=1`);
 
     // Use the MegaCloud instance to extract information from the video URL
     try {
