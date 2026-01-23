@@ -36,6 +36,16 @@ class MegaCloud {
         sources: [],
       };
 
+      const html = await axios.get(videoUrl.href, {
+        headers: {
+          Accept: "*/*",
+          "X-Requested-With": "XMLHttpRequest",
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+          Referer: videoUrl.href,
+        },
+      });
+
       const nounce = this.extractNonce(html.data);
       const videoId = videoUrl?.href?.split("/")?.pop()?.split("?")[0];
 
